@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/management_description_background"
+            android:layout_margin="12dp"
+            android:id="@+id/madInfo">
+
+            <TextView
+                android:id="@+id/madDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="14112014"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:textSize="18sp"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:id="@+id/madTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/madDate"
+                android:layout_marginBottom="10dp"
+
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:text="Title" />
+
+
+            <TextView
+                android:id="@+id/text8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/madTitle"
+
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:text="Sent By         :" />
+
+            <TextView
+                android:id="@+id/madSentBy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/madTitle"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/text8"
+                android:fitsSystemWindows="true"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:text="Sent By" />
+
+            <TextView
+                android:id="@+id/madSentByNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/madSentBy"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/text8"
+                android:fitsSystemWindows="true"
+                android:textSize="18sp"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/text9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/madSentByNumber"
+
+
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:text="Description  :" />
+
+            <TextView
+                android:id="@+id/madDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text9"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:fitsSystemWindows="true"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:text="Description" />
+
+            <!--<TextView-->
+            <!--android:id="@+id/text10"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@id/text9"-->
+            <!--android:layout_marginBottom="10dp"-->
+
+            <!--android:textSize="18sp"-->
+            <!--android:textColor="#000000"-->
+            <!--android:text="Area                    :" />-->
+
+
+            <!--<TextView-->
+            <!--android:id="@+id/madArea"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@id/text9"-->
+            <!--android:layout_marginLeft="20dp"-->
+            <!--android:layout_toRightOf="@id/text10"-->
+            <!--android:fitsSystemWindows="true"-->
+            <!--android:textSize="18sp"-->
+            <!--android:textColor="#000000"-->
+            <!--android:text="Area" />-->
+
+            <TextView
+                android:id="@+id/text11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/madDescription"
+
+
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:text="AssignedTo  :" />
+
+
+            <TextView
+                android:id="@+id/madAssignedTo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/madDescription"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/text11"
+                android:fitsSystemWindows="true"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:text="AssignedTo" />
+
+            <TextView
+                android:id="@+id/text12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/madAssignedTo"
+
+
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:text="Priority           :" />
+
+
+            <TextView
+                android:id="@+id/madRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/madAssignedTo"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_toRightOf="@id/text12"
+                android:fitsSystemWindows="true"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:text="Rating" />
+
+            <TextView
+                android:id="@+id/text13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/madRating"
+
+
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:text="AssignedBy   :" />
+
+
+            <TextView
+                android:id="@+id/madAssignedBy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/madRating"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/text13"
+                android:layout_marginBottom="10dp"
+                android:fitsSystemWindows="true"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:text="AssignedBy" />
+
+            <TextView
+                android:id="@+id/text16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/madAssignedBy"
+
+
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:text="Location        :" />
+
+
+            <TextView
+                android:id="@+id/madLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/madAssignedBy"
+                android:layout_toRightOf="@id/text16"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="10dp"
+                android:fitsSystemWindows="true"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:text="Location" />
+
+            <TextView
+                android:id="@+id/text38"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/madLocation"
+
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:text="Comments         :" />
+
+
+            <TextView
+                android:id="@+id/madShowComment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text38"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"
+                android:fitsSystemWindows="true"
+                android:textSize="18sp"
+                android:layout_marginTop="5dp"
+                android:textColor="#000000"
+                android:text="Comment" />
+
+            <!--<TextView-->
+            <!--android:id="@+id/text17"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@id/text16"-->
+            <!--android:layout_marginBottom="10dp"-->
+
+            <!--android:textSize="18sp"-->
+            <!--android:textColor="#000000"-->
+            <!--android:text="Status                :" />-->
+
+
+            <!--<TextView-->
+            <!--android:id="@+id/madStatus"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@id/text16"-->
+            <!--android:layout_marginLeft="20dp"-->
+            <!--android:layout_toRightOf="@id/text17"-->
+            <!--android:fitsSystemWindows="true"-->
+            <!--android:textSize="18sp"-->
+            <!--android:textColor="#000000"-->
+            <!--android:text="Status" />-->
+        </RelativeLayout>
+
+
+        <ImageView
+            android:id="@+id/madImage"
+            android:layout_width="230dp"
+            android:layout_height="230dp"
+            android:scaleType="centerInside"
+            android:layout_below="@id/madInfo"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="30dp"  />
+
+        <!--<ImageView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/madChangeCategoryFab"-->
+        <!--android:src="@drawable/change_category_button"-->
+        <!--android:layout_below="@+id/madImage"-->
+        <!--android:layout_marginBottom="10dp"-->
+        <!--android:layout_marginLeft="80dp"-->
+        <!--/>-->
+
+        <!--<ImageView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/madSimilarComplaintFab"-->
+        <!--android:layout_below="@+id/madImage"-->
+        <!--android:src="@drawable/similar_button"-->
+        <!--android:layout_marginBottom="10dp"-->
+        <!--android:layout_marginLeft="180dp"-->
+        <!--/>-->
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:id="@+id/madChangeCategoryFab"
+            android:src="@drawable/change_category_button"
+            android:layout_below="@+id/madComplete"
+            android:layout_toRightOf="@+id/madComplete"
+            android:layout_toEndOf="@+id/madComplete" />
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/similar_button"
+            android:id="@+id/madSimilarComplaintFab"
+            android:layout_alignTop="@+id/madComplete"
+            android:layout_toLeftOf="@+id/madCall"
+            android:layout_toStartOf="@+id/madCall" />
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:id="@+id/madComplete"
+            android:src="@drawable/done"
+            android:layout_below="@+id/madImage"
+            android:layout_alignLeft="@+id/madInfo"
+            android:layout_alignStart="@+id/madInfo" />
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/call"
+            android:id="@+id/madCall"
+            android:layout_below="@+id/madSimilarComplaintFab"
+            android:layout_toRightOf="@+id/madUpdateComplaint"
+            android:layout_toEndOf="@+id/madUpdateComplaint" />
+
+
+        <Spinner
+            android:id="@+id/madAssignStatus"
+            android:layout_width="match_parent"
+            android:layout_margin="10dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/madChangeCategoryFab">
+        </Spinner>
+
+        <Spinner
+            android:id="@+id/madAssignPriority"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_below="@id/madAssignStatus"></Spinner>
+
+        <Spinner
+            android:id="@+id/madAssignWorker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="70dp"
+            android:layout_marginLeft="10dp"
+            android:layout_below="@id/madAssignPriority">
+        </Spinner>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/madAddWorker"
+            android:src="@drawable/add_worker_symbol"
+            android:layout_alignTop="@+id/madAssignWorker"
+            android:layout_alignRight="@+id/madAssignPriority"
+            android:layout_alignEnd="@+id/madAssignPriority" />
+
+        <EditText
+            android:id="@+id/madComment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:hint="Attach Comment"
+            android:layout_below="@id/madAssignWorker" />
+
+        <Button
+            android:id="@+id/madUpdateComplaint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="120dp"
+            android:layout_marginTop="20dp"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+            android:layout_below="@id/madComment"
+            android:text="Assign" />
+
+    </RelativeLayout>
+
+</ScrollView>
