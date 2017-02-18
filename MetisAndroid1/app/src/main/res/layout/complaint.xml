@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <!--<RelativeLayout-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="#f1fde7"-->
+            <!--android:padding="20dp"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:layout_gravity="center_horizontal">-->
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/complaintImage"
+                android:src="@drawable/add_photo_symbol"
+                android:layout_marginTop="15dp"
+                android:layout_gravity="center_horizontal" />
+        <!--</RelativeLayout>-->
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Upload Image (Optional)"
+            android:textSize="18sp"
+            android:layout_marginTop="10dp"
+            android:textColor="#000000"
+            android:layout_marginBottom="15dp"
+            android:layout_gravity="center_horizontal" />
+
+    <Spinner
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="#6040b5ff"
+        android:id="@+id/spinner110">
+    </Spinner>
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:hint="Enter Title"
+            android:layout_margin="12dp"
+            android:id="@+id/etTitle" />
+
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:hint="Enter Location"
+        android:id="@+id/etlocation"
+        android:layout_margin="12dp"
+        android:layout_weight=".1"/>
+
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:hint="Enter description"
+        android:id="@+id/etDescription"
+        android:layout_margin="12dp"
+        android:layout_weight=".1"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="Contact Number"
+            android:id="@+id/etNumber"
+            android:layout_margin="12dp"
+            android:layout_weight=".1"/>
+
+
+        <!--<RadioGroup-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@id/etDescription"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:id="@+id/ucRadioGroup">-->
+
+            <!--<RadioButton-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:id="@+id/ucRdb1"-->
+                <!--android:text="Private"-->
+                <!--android:layout_marginTop="25dp"-->
+                <!--android:layout_marginLeft="20dp"-->
+                <!--android:textSize="20sp"/>-->
+
+            <!--<RadioButton-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:id="@+id/ucRdb2"-->
+                <!--android:layout_marginLeft="40dp"-->
+                <!--android:layout_marginTop="25dp"-->
+                <!--android:text="Public"-->
+                <!--android:textSize="20sp"/>-->
+
+
+
+        <!--</RadioGroup>-->
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleX="0.7"
+        android:scaleY="0.7"
+        android:src="@drawable/complaint_button"
+        android:id="@+id/complaintUploadBtn"
+        android:text="Complain"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="center_horizontal">
+
+    </ImageView>
+
+    </LinearLayout>
+
+</ScrollView>
+

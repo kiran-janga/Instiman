@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class='col-sm-6 col-sm-offset-3 row-sm-offset-12'>
+
+<!-- <h3>Check, Add, Edit, Delete Worker (or) Manager</h3> -->
+<h3>{{title}}</h3>
+<br>
+<br>
+
+<!-- <p><a href="/owner/categories/{{categoryId}}/delete/"  class="btn btn-primary col-sm-offset-12" role="button">Delete Category</a></p> -->
+
+<h2>Managers</h2>
+
+<p><a href="/owner/manager/add/"  class="btn btn-primary col-sm-offset-12" role="button">Add Manager</a></p>
+
+<form method='GET' action=''>
+<input type='text' name='manager' placeholder='Search Manager' value='{{ request.GET.q }}'/>
+<input type='submit' value='Search' />
+</form>
+
+
+<div id="kiran">
+{% for obj in manager_list %}
+<div class="row" >
+  <div class="col-sm-12">
+      
+        <!-- {% if obj.draft %}<h3>Staff only: Draft</h3>{% endif %}  -->
+        <!-- {% if obj.publish > today %}<h3>Staff Only: Future Post</h3>{% endif %} -->
+
+
+        <h3>{{ obj.name }}</h3> 
+        <h3>{{ obj.email }}</h3>
+
+  </div>
+<hr/>
+</div>
+{% endfor %}
+</div>
+<br>
+<br>
+<h2>Workers</h2>
+
+<p><a href="/owner/worker/add/" class="btn btn-primary col-sm-offset-12" role="button">Add Worker</a></p>
+
+<form method='GET' action=''>
+<input type='text' name='worker' placeholder='Serch Worker' value='{{ request.GET.category }}'/>
+<input type='submit' value='Search' />
+</form>
+
+
+
+<div id="kiran">
+{% for obj in worker_list %}
+<div class="row" >
+  <div class="col-sm-12" >
+      
+        <!-- {% if obj.draft %}<h3>Staff only: Draft</h3>{% endif %}  -->
+        <!-- {% if obj.publish > today %}<h3>Staff Only: Future Post</h3>{% endif %} -->
+        <h3>{{ obj.name }}</h3>
+        <h3>{{ obj.number }}</h3>
+
+  </div>
+<hr/>
+</div>
+{% endfor %}
+</div>
+
+
+<!-- <div class="pagination">
+    <span class="step-links">
+        {% if object_list.has_previous %}
+            <a href="?{{ page_request_var }}={{ object_list.previous_page_number }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">previous</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ object_list.number }} of {{ object_list.paginator.num_pages }}.
+        </span>
+
+        {% if object_list.has_next %}
+            <a href="?{{ page_request_var }}={{ object_list.next_page_number }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">next</a>
+        {% endif %}
+    </span>
+</div>
+
+</div> -->
+</div>
+{% endblock content %}

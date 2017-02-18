@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">InstiMan</string>
+    <string name="spinner_title">Select Category</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="about"> description..... .................... .................</string>
+    <string name="title_activity_management">Management</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_history">History</string>
+    <string name="IMAGE_URL">"http://10.1.138.95:8000"</string>
+
+
+    <string name="interstitial_ad_unit_id">ca-app-pub-3940256099942544/1033173712</string>
+
+
+    <string-array name="Priority">
+        <item>Routine</item>
+        <item>Important</item>
+        <item>Very Important</item>
+    </string-array>
+
+    <string name="gcm_SenderId">687880486277</string>
+
+    <string-array name="Status">
+        <item>In Process</item>
+        <item>pending</item>
+    </string-array>
+
+    <string name="banner_add_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+    
+</resources>

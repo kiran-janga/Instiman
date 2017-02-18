@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block head_title %}
+{{ instance.title }} | {{ block.super }}
+{% endblock head_title %}
+
+
+
+{% block content %}
+<div class='col-sm-6 col-sm-offset-3'>
+    {% if instance.image %}
+    <img src='{{ instance.image.url }}' class='img-responsive' />
+    {% endif %}
+<!-- <h1>{{ title }} <small>{% if instance.draft %}<span style='color:red;'>Draft</span> {% endif %}{{ instance.publish }}</small></h1>
+{% if instance.user.get_full_name %}
+ -->
+<h1>{{title}}</h1>
+<p>Time Stamp: {{ instance.timestamp }}</p>
+<!-- <p>Sent By: {{ instance.user.full_name}}</p> -->
+
+<p>Location: {{ instance.location }}</p>
+<p>Description: {{ instance.description }}</p>
+<p>Assigned By: {{ instance.assigned_by }}</p>
+<p>Assigned To: {{ instance.assigned_to }}</p>
+<p>Category: {{ instance.category.name}}</p>
+<p>Status: {{ instance.status }}</p>
+<p>Comment: {{ instance.comment }}</p>
+<!-- <p>Priority: {{ instance.priority }}</p> -->
+
+
+<!-- <p>Author: {{ instance.user.get_full_name }}</p> -->
+<!-- {% endif %} -->
+<!-- <div class='row'>
+<div class='col-sm-12'>
+
+{{ instance.content|linebreaks }}
+
+<hr/>
+
+
+</div>
+</div> -->
+
+<p><a href="/owner/complaints/{{instance.id}}/edit" class="btn btn-primary" role="button">Edit</a></p>
+</div>
+
+
+{% endblock content %}

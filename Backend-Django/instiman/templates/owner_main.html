@@ -1,0 +1,100 @@
+
+
+{% extends "base.html" %}
+
+from complaint.models import Complaint
+
+{% block content %}
+<div class='col-sm-6 col-sm-offset-3'>
+
+
+<!-- <div id="chart"></div> -->
+
+<p>
+    
+</p>
+
+<p>No of complaints : {{complaint_number}}</p>
+
+
+<h2>{{title}}</h2>
+
+
+
+{% for key, value in dict.items %}
+
+<div class="row">
+  <div class="col-sm-12">
+       <h3><a href="/owner/categories/{{key}}/">{{value.category_name}}</a></h3> 
+       <!-- {% if value.total == 0 %} -->
+       <h4>Complaint distribution - {{value.category_name}} - {{value.total}}</h4>
+       <!-- {% endif %} -->
+       {% if value.total != 0 %}
+       <div id="container-{{key}}" style="width: 550px; height: 400px; margin: 0 auto"></div>
+<script type="text/javascript">
+	
+$(document).ready(function() {  
+   var chart = {
+       plotBackgroundColor: null,
+       plotBorderWidth: null,
+       plotShadow: false
+   };
+   var title = {
+      text: 'Complaint distribution - {{value.category_name}} - {{value.total}}'  
+   };      
+   var tooltip = {
+      pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+   };
+   var plotOptions = {
+      pie: {
+         allowPointSelect: true,
+         cursor: 'pointer',
+         dataLabels: {
+            enabled: true,
+            format: '<b>{point.name}%</b>: {point.percentage:.1f} %',
+            style: {
+               color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+            }
+         }
+      }
+   };
+   var series= [{
+      type: 'pie',
+      name: 'Complaint Distribution',
+      data: [
+         {
+            name: 'New',
+            y: {{value.new}}/{{value.total}},
+            sliced: true,
+            selected: true
+         },
+         ['Pending',{{value.pending}}/{{value.total}}],
+         ['In Process', {{value.inProcess}}/{{value.total}}]
+         
+      ]
+   }];     
+      
+   var json = {};   
+   json.chart = chart; 
+   json.title = title;     
+   json.tooltip = tooltip;  
+   json.series = series;
+   json.plotOptions = plotOptions;
+   $('#container-{{key}}').highcharts(json);  
+});
+</script>
+
+
+   <h4>Rejected Complaints - {{value.rejected}}</h4>
+   <h4>Similar Complaints - {{value.similar}}</h4>
+       
+    
+  </div>
+  {% endif %}
+   
+<hr/>
+</div>
+{% endfor %}
+</div>
+
+{% endblock content %}
